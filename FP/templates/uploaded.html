@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your label
+{% endblock %}
+
+{% block main %}
+    <div class="image-view" id="img-view">
+        <img src="{{ url_for('send_uploaded_file', filename = uploaded_image) }}">
+    </div>
+    
+
+{% endblock %}
