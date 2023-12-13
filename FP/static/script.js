@@ -11,7 +11,7 @@ dropArea.addEventListener("drop", function(e){
     inputFile.files = e.dataTransfer.files;
 });
 
-document.getElementById("form").onchange = function() {
+document.getElementById("input-file").onchange = function() {
     document.getElementById("form").submit();
 };
 
