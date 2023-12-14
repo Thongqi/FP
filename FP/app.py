@@ -5,10 +5,11 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session, send_from_directory
 from flask_session import Session
 from werkzeug.utils import secure_filename
-
+from PIL import pytesseract
 
 #Configuer application
 app = Flask(__name__)
+app.secret_key = "asds"
 
 # Defining upload folder path
 upload_folder = os.path.join('static', 'Image')
@@ -22,10 +23,8 @@ def index():
 @app.route("/uploaded", methods = ['GET', 'POST'])
 def upload():
     if request.method == 'POST':
-        if 'file' not in request.files:
-            return 'No file part'
-        elif request.files:
-            f = request.files("input-file")
+        if request.files:
+            f = request.files["input-file"]
             filename = secure_filename(f.filename)
             f.save(os.path.join(app.config['UPLOAD_IMG'], filename))
             session['f_file_path'] = os.path.join(app.config['UPLOAD_IMG'], filename)
