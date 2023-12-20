@@ -6,8 +6,10 @@
 
 {% block main %}
     <div class="image-view" id="img-view">
-        <img src="{{ url_for('send_uploaded_file',filename=uploaded_image) }}">
+        <img class="img" src="{{ url_for('send_uploaded_file',filename=uploaded_image) }}">
     </div>
+
+    {{ d }}
     
 
 {% endblock %}

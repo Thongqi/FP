@@ -45,6 +45,12 @@
     background-color: #888888;
 }
 
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
 .theme-color {
     background-color: #0f70e6;
 }
