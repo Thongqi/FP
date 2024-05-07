@@ -1,0 +1,26 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    {{ username }}
+    {{ request.user }}
+    Following: {{ follow }}
+    <p >
+        Followers: <span id="followers">{{ followers }}</span>
+    </p>
+    
+    {% for post in posts %}
+    <div>
+        {{ post.post }}
+        {{ post.number_of_likes }}
+    </div>
+    {% endfor %}
+    {% if request.user != username %}
+    <form method="post">
+    {% csrf_token %}
+        <p hidden id="id">{{ id }}</p>
+        
+        <button name="follow" id="follow" >{{ status }}</button>
+    </form>
+    {% endif %}
+
+{% endblock %}
