@@ -1,0 +1,93 @@
+https://medium.com/@grmcameron/intials-as-user-icon-with-css-efcccf06a7d8
+<style>
+
+.box {
+  border: 1px solid black;
+  width: 1070px;
+  margin: 60px;
+  padding: 5px;
+}
+
+.body {
+  width: 100%;
+  height: auto;
+  border: 1px solid grey;
+  max-height: 250px;
+  overflow: hidden;
+  border: 1px;
+  padding: 5px 0px;
+}
+
+.profile {
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  border:1px solid black;
+}
+
+.pic {
+  background:black;
+  color: white;
+  border-radius: 50%;
+  content: attr(data-initials);
+  font-weight: 600;
+  text-align: center;
+  width: 50px;
+  height:50px;
+  flex-shrink: 0;
+}
+
+.pfl2 {
+  display: flex;
+  font-size: small;
+  align-items: flex-end;
+  color: grey;
+  gap: 10px;
+}
+
+
+
+button {
+	width: 67px;
+	height: 32px;
+    border-radius: 8px;
+    padding: 0px 16px;
+
+}
+
+.button {
+	display: flex;
+    justify-content: flex-end;
+
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <div class="profile">
+    <div class="pic" data-initials="W"></div>
+      <div>
+          <div>
+          OSs
+          </div>
+           <div class="pfl2">
+              <div>
+              Date time 
+              </div>
+              <div>
+              Edited
+              </div>
+           </div>
+      </div>
+  	</div>
+  <div class="body">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box. You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+  </div>
+
+  
+  <div class="button">
+  	<button/>
+    <button/>
+  </div>
+</div>
