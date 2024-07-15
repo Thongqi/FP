@@ -120,15 +120,15 @@ function submit_post(event){
             const posts = document.createElement('div');
 
             const user = document.createElement('div')
-            user.innerHTML = item['owner']
+            user.innerHTML = document.get
 
             const body = document.createElement('div')
-            body.innerHTML = `${{ user }}`
+            body.innerHTML = item['post']
 
             const time = document.createElement('div')
             time.innerHTML = item['createdOn']
 
-
+            
 
             posts.appendChild(user)
             posts.appendChild(body)
